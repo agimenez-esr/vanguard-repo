@@ -1,0 +1,29 @@
+<apex:page controller="AccountControllerForce" contentType="application/pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf">
+    <html>
+        <head>
+            <style type="text/css">
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="title">Account List</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!accs}" var="acc">
+                        <tr>
+                            <td>{!acc.Name}</td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </body>
+    </html>
+</apex:page>

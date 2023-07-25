@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+        <lightning-accordion class="example-accordion" allow-multiple-sections-open active-section-name="">
+            <lightning-accordion-section name="ejercicio" label="Conectar con apex manualmente">
+                <div class="slds-p-horizontal_small">
+                    <lightning-button label="Show contacts" onclick={handleGetData}></lightning-button>
+                </div>
+                <template lwc:if={contacts}>
+                    <template for:each={contacts} for:item="contact">
+                        <div key={contact.Id} class="slds-m-bottom_x-small slds-box slds-box_small">
+                            <lightning-card variant="Narrow" title={contact.Name} icon-name="standard:contact">
+                                <p class="slds-m-left_medium">
+                                    <lightning-icon icon-name="standard:email" alternative-text="email" size="x-small"
+                                    title="email"></lightning-icon> {contact.Email}
+                                </p>
+                                <p class="slds-m-left_medium">
+                                    <lightning-input type="text" label="Phone" value={contact.Phone} data-inputid={contact.Id}></lightning-input>
+                                    <lightning-button label="Save" onclick={handleSaveData} data-id={contact.Id}></lightning-button>
+                                </p>
+                            </lightning-card>
+                        </div>
+                    </template>
+                </template>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

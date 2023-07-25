@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <lightning-accordion class="example-accordion" allow-multiple-sections-open active-section-name="">
+            <lightning-accordion-section name="ejercicio" label="Ejercicio 5">
+                <div class="slds-p-horizontal_small">
+                    <template for:each={contacts.data} for:item="contact">
+                        <c-show-contacts-child key={contact.Id} name={contact.Name} email={contact.Email} phone={contact.Phone}></c-show-contacts-child>
+                    </template>
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

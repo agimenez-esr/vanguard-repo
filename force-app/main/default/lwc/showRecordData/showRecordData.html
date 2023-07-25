@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <lightning-accordion class="example-accordion" allow-multiple-sections-open active-section-name="">
+            <lightning-accordion-section name="ejercicio" label="Ejercicio 4">
+                <div class="slds-p-horizontal_small">
+                    <lightning-record-form
+                    object-api-name={objectApiName}
+                    record-id={recordId}
+                    fields={showFields}
+                >
+                </lightning-record-form>
+                </div>
+                <div class="slds-p-horizontal_small">
+                    Phone: {phone}
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

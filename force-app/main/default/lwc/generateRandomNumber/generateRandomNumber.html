@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <lightning-accordion class="example-accordion" allow-multiple-sections-open active-section-name="">
+            <lightning-accordion-section name="ejercicio" label="Ejercicio 2">
+                <div class="slds-p-horizontal_small">
+                    <lightning-button label="Add" onclick={handleAdd} slot="actions"></lightning-button>
+                </div>
+                <div class="slds-p-horizontal_small">
+                    {number}
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

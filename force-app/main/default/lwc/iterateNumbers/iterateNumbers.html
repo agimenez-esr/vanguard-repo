@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <lightning-accordion class="example-accordion" allow-multiple-sections-open active-section-name="">
+            <lightning-accordion-section name="ejercicio" label="Ejercicio 1">
+                <div class="slds-p-horizontal_small">
+                    <ul>
+                        <template for:each={numbers} for:item="number">
+                        <li key={number}>{number}</li>
+                        </template>
+                    </ul>
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

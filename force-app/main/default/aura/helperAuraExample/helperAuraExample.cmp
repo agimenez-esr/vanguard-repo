@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <!--Attributes-->
+    <aura:attribute name="number1" type="Integer" default="5"/>
+    <aura:attribute name="number2" type="Integer" default="6"/>
+    <aura:attribute name="result" type="Integer" default="0"/>
+
+    <!--Init-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!--Content-->
+    <lightning:card>
+        <div class="slds-p-horizontal_small">
+            <p>{!v.result}</p>
+            <aura:if isTrue="{!v.result >= 10}">
+                <p>El resultado es mayor o igual a 10</p>
+                <aura:set attribute="else">
+                    <p>El resultado es menor a 10</p>
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+
+</aura:component>	

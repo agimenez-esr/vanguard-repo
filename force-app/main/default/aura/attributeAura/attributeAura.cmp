@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <!--Attributes-->
+    <aura:attribute name="text1" type="String" default="Texto de prueba" />
+    <aura:attribute name="text2" type="String" default="" />
+
+    <!--Content-->
+    <lightning:card>
+        <div class="slds-p-horizontal_small">
+            <p>{!v.text2}</p>
+            <lightning:button variant="brand" label="Show Text" title="Show Text" onclick="{! c.handleClick }" />
+        </div>
+    </lightning:card>
+
+</aura:component>	

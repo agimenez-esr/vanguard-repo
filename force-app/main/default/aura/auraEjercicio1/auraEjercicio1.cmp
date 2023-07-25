@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <!--Attributes-->
+    <aura:attribute name="tasks" type="List" default="[]" description="Lista de tareas"/>
+    <aura:attribute name="newTask" type="String" default="" description="Nueva tarea"/>
+
+    <!--Content-->
+    <lightning:card title="Tareas">
+        <aura:set attribute="actions">
+            <lightning:button label="Añadir tarea" onclick="{!c.addTask}"/>
+        </aura:set>
+        <aura:set attribute="footer">
+            <lightning:input name="addTask" label="Nombre de la tarea" value="{!v.newTask}"/>
+        </aura:set>
+        <ul class="slds-p-horizontal_small">
+            <aura:iteration items="{!v.tasks}" var="task">
+                <li>{!task}</li>
+            </aura:iteration>
+        </ul>
+    </lightning:card>
+    
+</aura:component>

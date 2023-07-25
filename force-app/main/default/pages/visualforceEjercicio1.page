@@ -1,0 +1,48 @@
+<apex:page controller="ContactControllerForce" contentType="application/pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf">
+    <html>
+        <head>
+            <style type="text/css">
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+                th, td {
+                    text-align: left;
+                    padding: 8px;
+                }
+                tr:nth-child(even){background-color: #f2f2f2}
+                th {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+                .title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="title">Contact List</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!contacts}" var="contact">
+                        <tr>
+                            <td>{!contact.Name}</td>
+                            <td>{!contact.Email}</td>
+                            <td>{!contact.Phone}</td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </body>
+    </html>
+</apex:page>

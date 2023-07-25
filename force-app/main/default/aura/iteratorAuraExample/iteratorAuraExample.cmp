@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <!--Attributes-->
+    <aura:attribute name="names" type="String[]" default="['John', 'Jane', 'Bob']"/>
+
+    <!--Content-->
+    <lightning:card>
+        <ul class="slds-p-horizontal_small">
+            <aura:iteration items="{!v.names}" var="name">
+                <li>{!name}</li>
+            </aura:iteration>
+        </ul>
+    </lightning:card>
+
+</aura:component>	

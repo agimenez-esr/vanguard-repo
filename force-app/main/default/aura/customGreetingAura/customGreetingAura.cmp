@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <!--Attributes-->
+    <aura:attribute name="greeting" type="String" default="Hello"/>
+    <aura:attribute name="name" type="String" default=""/>
+
+    <!--Content-->
+    <lightning:card title="{!v.greeting}">
+        <div class="slds-p-horizontal_small">
+        <p>{!v.name}</p>
+            <lightning:input name="input"  aura:id="name-id" onkeyup="{!c.handleName}" />
+        </div>
+    </lightning:card>
+
+</aura:component>	

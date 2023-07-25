@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <lightning-accordion class="example-accordion" allow-multiple-sections-open active-section-name="">
+            <lightning-accordion-section name="ejercicio" label="Ejercicio 3">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="Introduce tu nombre" onchange={handleNameChange} value={name}></lightning-input>
+                </div>
+                <div class="slds-p-horizontal_small">
+                    {customGreeting}
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>
